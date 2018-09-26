@@ -52,6 +52,8 @@ services:
     <<: *defaults
     ports:
       - '9000:9000'
+    volumes:
+      - ./config.yml:/etc/sentry/config.yml
 
   cron:
     <<: *defaults
